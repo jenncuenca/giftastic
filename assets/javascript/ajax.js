@@ -1,11 +1,11 @@
 // Create an array named "topics"
 
-var topics = ['dog', 'cat', 'squirrel', 'dolphin'];
+var topics = ['koala', 'panda', 'tiger', 'dragon'];
 
 //for loop for going through array to grab data to create buttons
 function buttonCreation () {
 
-    $('#buttons-view').empty();
+    $('#buttons-view').empty(); //empties div
 
     for (var i =0; i < topics.length; i++){
 
@@ -71,7 +71,7 @@ $(document).on("click", '.animal', function(){
       
     });
 
-    console.log ("AFTER AJAX")
+    //console.log ("AFTER AJAX")
 
     // on-click image changes state
     $(document).on("click", '.gif', function(){
@@ -92,13 +92,7 @@ $(document).on("click", '.animal', function(){
         $(this).attr("data-gif-state", "still");
       }
 
-        
-
-        
-
-       
-
-        console.log("hello")
+        //console.log("hello")
     });
 
 });
