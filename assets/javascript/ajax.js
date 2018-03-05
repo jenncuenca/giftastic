@@ -73,6 +73,33 @@ $(document).on("click", '.animal', function(){
 
     console.log ("AFTER AJAX")
 
-   
+    // on-click image changes state
+    $(document).on("click", '.gif', function(){
+
+        var state = $(this).attr("data-gif-state");
+
+        //check current state
+
+        //if state is animated change to still state attr and scr
+      if (state == "still") {
+        $(this).attr("src", $(this).attr("data-animated-url"));
+        $(this).attr("data-gif-state", "animated");
+      }
+
+       //if state is still change back to animated attr and scr
+      else if (state == "animated") {
+        $(this).attr("src", $(this).attr("data-still-url"));
+        $(this).attr("data-gif-state", "still");
+      }
+
+        
+
+        
+
+       
+
+        console.log("hello")
+    });
+
 });
 
