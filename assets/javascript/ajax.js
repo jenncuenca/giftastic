@@ -34,7 +34,45 @@ $('#add-gif').on("click", function() {
      //console.log(formInput)
 });
 
+$(document).on("click", '.animal', function(){
+    var animal= $(this).html();
+    
+    console.log("animal btn clicked")
+    console.log(animal)
 
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+        }).then(function(response) {
+        
+        $('#gifs-appear-here').empty();
+
+        var results = response.data;
+
+        for (var i = 0; i < results.length; i++) {
+          var animalDiv= $('<div>');
+          var p= $('<p>').text(results[i].rating);
+          var animalGif= $('<img>');
+        
+          animalGif.addClass('gif'); // adds .gif class to new gifs generated
+          animalGif.attr("src", results[i].images.fixed_height.url);
+          animalGif.attr('data-gif-state', 'animated');
+          animalGif.attr('data-still-url', results[i].images.fixed_height_still.url);
+          animalGif.attr('data-animated-url', results[i].images.fixed_height.url);
+
+          animalDiv.append(p);
+          animalDiv.append(animalGif);
+          $('#gifs-appear-here').append(animalDiv);
+      }
+
+      console.log(results)
+      
+    });
+
+    console.log ("AFTER AJAX")
+
+   
 });
 
