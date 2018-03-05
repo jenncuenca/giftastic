@@ -20,6 +20,20 @@ function buttonCreation () {
 
 buttonCreation();
 
+//user is able to create their own button using the FORM
+$('#add-gif').on("click", function() {
+    event.preventDefault(); // prevents form default from reloading page
+
+    var formInput = $("#gif-input").val().trim(); // gets value of input box w/ chain
+
+    // formInput added value to topics array
+    topics.push(formInput);
+
+    buttonCreation();
+   
+     //console.log(formInput)
+});
+
 
 
 });
