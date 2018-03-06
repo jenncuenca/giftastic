@@ -53,12 +53,12 @@ $(document).on("click", '.animal', function(){
 
         for (var i = 0; i < results.length; i++) {
           var animalDiv= $('<div>');
-          var p= $('<p>').text(results[i].rating);
+          var p= $('<p>').text("Rating: " + results[i].rating);
           var animalGif= $('<img>');
         
           animalGif.addClass('gif'); // adds .gif class to new gifs generated
-          animalGif.attr("src", results[i].images.fixed_height.url);
-          animalGif.attr('data-gif-state', 'animated');
+          animalGif.attr("src", results[i].images.fixed_height_still.url);
+          animalGif.attr('data-gif-state', 'still');
           animalGif.attr('data-still-url', results[i].images.fixed_height_still.url);
           animalGif.attr('data-animated-url', results[i].images.fixed_height.url);
 
