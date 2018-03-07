@@ -72,6 +72,7 @@ $(document).on("click", '.animal', function(){
     });
 
     //console.log ("AFTER AJAX")
+});
 
     // on-click image changes state
     $(document).on("click", '.gif', function(){
@@ -92,8 +93,5 @@ $(document).on("click", '.animal', function(){
         $(this).attr("data-gif-state", "still");
       }
 
-        //console.log("hello")
+        console.log("hello")
     });
-
-});
-
