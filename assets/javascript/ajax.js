@@ -1,11 +1,11 @@
 // Create an array named "topics"
 
-var topics = ['koala', 'panda', 'tiger', 'dragon'];
+var topics = ['Thestral', 'Dragon', 'Basilisk', 'Hippogriff','Niffler'];
 
 //for loop for going through array to grab data to create buttons
 function buttonCreation () {
 
-    $('#buttons-view').empty(); //empties div
+    $('#buttons').empty(); //empties div
 
     for (var i =0; i < topics.length; i++){
 
@@ -14,7 +14,7 @@ function buttonCreation () {
     newBtn.addClass('btn btn-info animal') // adds classes to an jquery html created element
     
     //button gets appended to html
-    $('#buttons-view').append(newBtn)
+    $('#buttons').append(newBtn)
     };
 };
 
@@ -52,7 +52,7 @@ $(document).on("click", '.animal', function(){
         var results = response.data;
 
         for (var i = 0; i < results.length; i++) {
-          var animalDiv= $('<div>');
+          var animalDiv= $('<div class="col-md-4" id="animalDiv">');
           var p= $('<p>').text("Rating: " + results[i].rating);
           var animalGif= $('<img>');
         

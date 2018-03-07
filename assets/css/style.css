@@ -1,0 +1,38 @@
+body {
+    min-height: 2000px;
+    font-family: 'IM Fell English', serif;
+  }
+  
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+
+#main {
+    padding-top: 5%;
+}
+
+.animal {
+    margin: 1%;
+}
+
+#animalDiv {
+    margin: 1%;
+}
+
+.gif {
+    padding: 1%;
+}
+
+h1 {
+    margin: 1%;
+    padding-bottom: 1%;
+    color: #32666f;
+}
+
+#gif-input {
+    border: solid 1px #ccc;
+}
+
+#add-gif {
+    margin-left: 1%;
+}
