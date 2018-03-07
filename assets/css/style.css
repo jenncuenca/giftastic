@@ -1,6 +1,12 @@
 body {
     min-height: 2000px;
     font-family: 'IM Fell English', serif;
+    color:#32666f;
+    background-image: url("../img/background.jpg");
+    background-position: center center;
+    background-repeat:  no-repeat;
+	background-attachment: fixed;
+    background-size:  cover;
   }
   
 .navbar-static-top {
@@ -25,9 +31,10 @@ body {
 }
 
 h1 {
-    margin: 1%;
+    margin-bottom: 2%;
     padding-bottom: 1%;
-    color: #32666f;
+    color: #478e9b;
+    border-bottom: solid 2px #32666f; 
 }
 
 #gif-input {
