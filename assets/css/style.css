@@ -13,6 +13,7 @@ body {
 
 .animal {
     margin: 1%;
+    font-size: 20px;
 }
 
 #animalDiv {
@@ -35,4 +36,5 @@ h1 {
 
 #add-gif {
     margin-left: 1%;
+    font-size: 20px;
 }
